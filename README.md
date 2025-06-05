@@ -72,5 +72,9 @@ Some of the test cases include:
     Long randomized DNA sequences (length 1000) to test performance and correctness
 
 ## Attribution
+The following parts of this project were generated or assisted by AI (ChatGPT). 
 
-Some parts of this project (such as the Makefile structure and test cases in `gentest.cpp`) were generated or assisted by AI (ChatGPT). However, I make sure that I understand all the tests and am fully responsible for the design, implementation, and correctness of the entire codebase.
+  * Makefile structure
+  * test cases in `gentest.cpp`
+  
+However, I make sure that I understand all the tests and am fully responsible for the design, implementation, and correctness of the entire codebase.
