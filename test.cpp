@@ -14,15 +14,13 @@ void test_simple() {
         {5, {{.to=6, .label='G'}}}
     };
     auto res = getKmers(automaton, std::vector<State>{6}, std::vector<Length>{3});
-    std::ranges::sort(res);
 
-    std::vector<std::string> expected{
+    std::unordered_set<std::string> expected{
         "ACG",
         "CGC",
         "GCT",
         "CTG",
     };
-    std::ranges::sort(expected);
     if (std::ranges::equal(expected, res)) {
         std::cout << "✅PASS\n";
     } else {
@@ -46,12 +44,10 @@ void test_single_diverge() {
         {8, {{.to=9, .label='G'}}          }
     };
     auto res = getKmers(automaton, std::vector<State>{7, 9}, std::vector<Length>{3});
-    std::ranges::sort(res);
 
-    std::vector<std::string> expected{
+    std::unordered_set<std::string> expected{
         "ACT", "CTC", "TCT", "CTG", "CTG", "TGT", "GTG",
     };
-    std::ranges::sort(expected);
     if (std::ranges::equal(expected, res)) {
         std::cout << "✅PASS\n";
     } else {
