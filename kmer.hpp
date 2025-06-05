@@ -13,8 +13,8 @@ struct Transition {
 
 void dfs(State current, const std::vector<State> &accepts, std::string path, unsigned long k,
          std::unordered_map<State, std::vector<Transition>> &automaton,
-         std::vector<std::string> &res);
+         std::unordered_map<Length, std::unordered_set<std::string>>);
 
 auto getKmers(std::unordered_map<State, std::vector<Transition>> &automaton,
               const std::vector<State> &accepts, std::vector<Length> ks)
-    -> std::unordered_set<std::string>;
+    -> std::unordered_map<Length, std::unordered_set<std::string>>;

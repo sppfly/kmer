@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -std=c++20 -Wall -Werror
 
 # Source and object files
-SRCS = main.cpp kmer.cpp test.cpp
+SRCS = main.cpp kmer.cpp test.cpp gentest.cpp
 OBJS = $(SRCS:.cpp=.o)
 TARGET = main
 
