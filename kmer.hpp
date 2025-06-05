@@ -1,0 +1,18 @@
+#include <string>
+#include <unordered_map>
+#include <vector>
+
+using State = int;
+using Length = unsigned long;
+
+struct Transition {
+    State to;
+    char label;
+};
+
+void dfs(State current, const std::vector<State> &accepts, std::string path, unsigned long k,
+         std::unordered_map<State, std::vector<Transition>> &automaton,
+         std::vector<std::string> &res);
+
+std::vector<std::string> getKmers(std::unordered_map<State, std::vector<Transition>> &automaton,
+                                  const std::vector<State> &accepts, std::vector<Length> ks);
