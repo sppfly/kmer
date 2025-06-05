@@ -13,6 +13,8 @@ Given an automaton represented as labeled transitions over the DNA alphabet `{A,
 
 ## How to Compile
 
+To compile this project, you need `make` and `gcc` supports c++20. The code is compiled and tested on `OpenSUSE Slowroll`.
+
 This project uses a `Makefile`. To build:
 
 ```bash
