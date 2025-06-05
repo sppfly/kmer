@@ -1,0 +1,62 @@
+
+# k-mer Extractor from Automaton
+
+This project provides a simple C++ tool for extracting all valid `k`-mers from the language of a labeled automaton. It supports multiple values of `k`, branching paths, and correctness tests.
+
+---
+
+## What It Does
+
+Given an automaton represented as labeled transitions over the DNA alphabet `{A, C, G, T}`, the program traverses all valid paths from the initial state and extracts every substring of length `k` from those paths (i.e., all valid `k`-mers).
+
+---
+
+## How to Compile
+
+This project uses a `Makefile`. To build:
+
+```bash
+make
+```
+
+This will compile all source files into a single binary called main.
+
+To clean up:
+```bash
+make clean
+```
+## How to Run
+
+After building, simply run the test suite:
+```
+
+./main
+```
+You should see output like this:
+```
+------test_simple------
+✅PASS
+------test_single_diverge------
+✅PASS
+...
+------test_long_random_sequence------
+✅PASS
+```
+
+Each test checks a different automaton structure and compares output to expected k-mers.
+
+
+## Example Test Cases
+
+Some of the test cases include:
+
+    Linear DNA paths like ACGCTG
+
+    Branching paths like ACTGTG and ACTCTG
+
+    Long randomized DNA sequences (length 1000) to test performance and correctness
+
+
+## Attribution
+
+Some parts of this project (such as the Makefile structure and test cases in `gentest.cpp`) were generated or assisted by AI (ChatGPT). However, I make sure that I understand all the tests and am fully responsible for the design, implementation, and correctness of the entire codebase.
