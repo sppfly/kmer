@@ -14,5 +14,5 @@ void dfs(State current, const std::vector<State> &accepts, std::string path, uns
          std::unordered_map<State, std::vector<Transition>> &automaton,
          std::vector<std::string> &res);
 
-std::vector<std::string> getKmers(std::unordered_map<State, std::vector<Transition>> &automaton,
-                                  const std::vector<State> &accepts, std::vector<Length> ks);
+auto getKmers(std::unordered_map<State, std::vector<Transition>> &automaton,
+                                  const std::vector<State> &accepts, std::vector<Length> ks) -> std::vector<std::string>;
